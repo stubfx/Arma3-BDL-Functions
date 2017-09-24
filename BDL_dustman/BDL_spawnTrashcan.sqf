@@ -1,3 +1,19 @@
+/*
+  Author: BarboneDiLusso    // steam : http://steamcommunity.com/id/barbonedilusso
+                            // gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
+
+	Description:
+    WORK IN PROGRESS
+
+  Example :
+    WORK IN PROGRESS
+*/
+
+//usare "spawn" per questa funzione
+//copyToClipboard format ['%1,"%2",%3',copyFromClipboard,typeOf cursorObject,player worldToModel (position (cursorObject))];hint copyFromClipboard;
+//_bidone = createVehicle ["Land_WheelieBin_01_F",cursorObject modelToWorld (cursorObject worldToModel (position (player))),[],0,"CAN_COLLIDE"];
+//copyToClipboard format ['%1,"%2",%3',copyFromClipboard,typeOf cursorObject,(cursorObject worldToModel (position (player))];hint copyFromClipboard;
+
 BDL_FNC_SPAWN_BIDONI = {
   _edifici_spazzatura = [
   "Land_i_House_Big_01_b_yellow_F",[1.13184,-8.27881,-3.0337],

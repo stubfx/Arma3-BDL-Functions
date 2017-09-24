@@ -9,11 +9,6 @@
     WORK IN PROGRESS
 */
 
-//usare "spawn" per questa funzione
-//copyToClipboard format ['%1,"%2",%3',copyFromClipboard,typeOf cursorObject,player worldToModel (position (cursorObject))];hint copyFromClipboard;
-//_bidone = createVehicle ["Land_WheelieBin_01_F",cursorObject modelToWorld (cursorObject worldToModel (position (player))),[],0,"CAN_COLLIDE"];
-//copyToClipboard format ['%1,"%2",%3',copyFromClipboard,typeOf cursorObject,(cursorObject worldToModel (position (player))];hint copyFromClipboard;
-
 _BDL_tmp = []execVm "BDL_spawnTrashcan.sqf";
 waitUntil {scriptDone _BDL_tmp;};
 _BDL_tmp = []execVm "BDL_tipTape.sqf";

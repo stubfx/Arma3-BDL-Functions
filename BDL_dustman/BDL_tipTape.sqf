@@ -1,3 +1,14 @@
+/*
+  Author: BarboneDiLusso    // steam : http://steamcommunity.com/id/barbonedilusso
+                            // gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
+
+	Description:
+    WORK IN PROGRESS
+
+  Example :
+    WORK IN PROGRESS
+*/
+
 BDL_FNC_NASTRO_SPAZZATURA = {
   _tmp_nastro_offset = 0;
   BDL_NASTRO_SPAZZATURA = nastro_discarica;

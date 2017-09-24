@@ -1,3 +1,14 @@
+/*
+  Author: BarboneDiLusso    // steam : http://steamcommunity.com/id/barbonedilusso
+                            // gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
+
+	Description:
+    WORK IN PROGRESS
+
+  Example :
+    WORK IN PROGRESS
+*/
+
 BDL_FNC_RACCOGLI_SPAZZATURA = {
   _cassonetto = _this select 0;
   _vehicle = vehicle player;
