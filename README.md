@@ -1,2 +1,2 @@
-# BDL Arma 3 scripts
-Free Arma 3 functions for everyone!
+# Welcome!
+## Here you can find my free Arma 3 functions!
