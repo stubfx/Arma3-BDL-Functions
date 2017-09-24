@@ -14,12 +14,27 @@
 
   //thats it!
   ```
-# How to use it?
+# After the import you can use it... but how?
   if you want to try it in console just copy and paste:
+  
   ```
-  //this is an example if you need to use BDL_eartquake
+  //use this (for example) if you need to call BDL_eartquake
   
   [player,10,true]spawn BDL_eartquake;
   
   //easy right?
+  ```
+  
+  and is the same if you want to use it in a script...  
+  Let me show an example.  
+  Next snippet will open house doors when you shot at it...  
+  
+  ```
+  //first import my function BDL_openHouseDoors
+  []execVm "BDL/BDL_openHouseDoors.sqf"
+  
+  //next use it in a player event handler...
+  player addEventHandler ["fired",{
+    [cursorObject,1]call BDL_openHouseDoors;
+  }];
   ```
