@@ -10,6 +10,8 @@
 		_this select 1:	INT - intensity {1,2,3,4}
 		_this select 2: bool - house destriction true/false
 
+    Example :
+      [player,10,true] call BDL_openHouseDoors;
 */
 BDL_earthquake = {
 	_this spawn {
