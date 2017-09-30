@@ -11,7 +11,7 @@
 		_this select 2: bool - house destriction true/false
 
     Example :
-      [player,10,true] call BDL_openHouseDoors;
+      [player,10,true] spawn BDL_earthquake;
 */
 BDL_earthquake = {
 	_this spawn {
