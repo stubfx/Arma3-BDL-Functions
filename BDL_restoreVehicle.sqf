@@ -1,6 +1,7 @@
 /*
-	Author: BarboneDiLusso    // steam : http://steamcommunity.com/id/barbonedilusso
-														// gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
+	Author: BarboneDiLusso
+	steam : http://steamcommunity.com/id/barbonedilusso
+	gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
 
 	Description: this script will restore a vehicle which is kind of Car on the platform
 							i recommend to use it in addaction like a restore base

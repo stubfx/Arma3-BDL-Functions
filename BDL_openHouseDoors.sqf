@@ -1,6 +1,7 @@
 /*
-  Author: BarboneDiLusso    // steam : http://steamcommunity.com/id/barbonedilusso
-                            // gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
+  Author: BarboneDiLusso
+  steam : http://steamcommunity.com/id/barbonedilusso
+  gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
 
   Description : open or close house doors
 
