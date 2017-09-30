@@ -22,32 +22,8 @@ _BDL_tmp = []execVm "BDL_addTrashcanMoney.sqf";
 waitUntil {scriptDone _BDL_tmp;};
 
 if (!isServer) then {
-  []spawn {
-    while {true} do {
-      waitUntil {inputAction "zeroingUp" > 0};
-      if (typeOf (vehicle player) in ["C_Van_01_transport_F"] ) then {
-        _cassonetto = nearestObject [((vehicle player) modelToWorld [0,-4,-2]),"Land_WheelieBin_01_F"];
-        if (isNull attachedTo _cassonetto) then {
-          if ((((vehicle player) modelToWorld [0,-4,-2]) distance position _cassonetto) < 3) then {
-            if ((typeOf _cassonetto) in ["Land_WheelieBin_01_F"]) then {
-              [_cassonetto]call BDL_FNC_RACCOGLI_SPAZZATURA;
-            }
-          }
-        }
-      }
-    };
-  };
-  []spawn {
-    while {true} do {
-      waitUntil {inputAction "zeroingDown" > 0};
-      if (typeOf (vehicle player) in ["C_Van_01_transport_F"] ) then {
-        _tmp = vehicle player getVariable ["BDL_spazzatura",[]];
-        if ((count _tmp) > 0) then {
-            []call BDL_FNC_LASCIA_SPAZZATURA;
-        }
-      }
-    };
-  };
+  _BDL_tmp = []execVm "BDL_dustmanKeys.sqf";
+  waitUntil {scriptDone _BDL_tmp;};
 }else{
   //SERVER ONLY!!
   []call BDL_FNC_SPAWN_BIDONI;
