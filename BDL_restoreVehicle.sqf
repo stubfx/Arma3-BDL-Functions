@@ -27,7 +27,7 @@ BDL_limitDistanceForRestoreVehicle = {
 			if ((_new_z - _old_z) < 3) then {_f = true;};
 		};
 	};
-	_f //return f
+	_f
 };
 BDL_restoreVehicle = {
 [_this select 0] spawn {
