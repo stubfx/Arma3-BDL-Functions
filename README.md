@@ -6,21 +6,21 @@
 
   1. create new folder called BDL (keep your mission folder in order!)
   1. copy and paste one (or more) functions from my repository
-  1. open your init.sqf file and add on the top:
-  ###### i want to import (for example) my earthquake function...
+  1. open your init.sqf file and add on the top:  
+  Ex. i want to import (for example) my earthquake function...
   ```
   []execVm "BDL/BDL_earthquake.sqf";
-  ```
-  ###### thats it!
+  ```  
+  thats it!
 
 # After the import you can use it... but how?
   if you want to try it in console just copy and paste:
   
-  ###### use this (for example) if you need to call BDL_earthquake
+  Ex. use this if you need to call BDL_earthquake
   ```
   [player,10,true]spawn BDL_earthquake;
-  ```
-  ###### easy right?
+  ```  
+  easy right?
   
   and is the same if you want to use it in a script...  
   Let me show an example.  
