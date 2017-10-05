@@ -7,7 +7,7 @@
   1. create new folder called BDL (keep your mission folder in order!)
   1. copy and paste one (or more) functions from my repository
   1. open your init.sqf file and add on the top:  
-  Ex. i want to import (for example) my earthquake function...
+  Ex. i want to import my earthquake function...
   ```
   []execVm "BDL/BDL_earthquake.sqf";
   ```  
