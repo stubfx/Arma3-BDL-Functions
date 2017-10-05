@@ -12,7 +12,7 @@
   ```
   []execVm "BDL/BDL_earthquake.sqf";
   ```  
-  thats it!
+  Thats it!
 
 # After the import you can use it... but how?
   if you want to try it in console just copy and paste:
@@ -21,7 +21,7 @@
   ```
   [player,10,true]spawn BDL_earthquake;
   ```  
-  easy right?
+  Easy right?
   
   and is the same if you want to use it in a script...  
   Let me show an example.  
