@@ -6,10 +6,11 @@ gitHub : https://github.com/LucaM97/Arma3_BDL_Functions
 Description:
 Drag system + vehicle load
 //how to use it
-just insert this in your core/init.sqf file 	-------------> []spawn {[]execVm "BDL_dragBody.sqf";};
+just insert this in your core/init.sqf file 	-------------> []spawn {[]execVm "BDL_dragSystem.sqf";};
 Ts3:
 Twgitalia.eu
 */
+
 /////////////////////////////////
 BDL_HospitalMarkers = ["marker_99"];//enable ONLY if u are in a life server
 //inserire il tipo di veicolo in cui si puo trasportare il corpo
@@ -18,6 +19,9 @@ BDL_DROP_LoadOnVehicleType = ["Car","support","ship","Armored","Air"];
 BDL_BleedingOut_maxTime = 60*1;
 BDL_BleedingOut_stabTime = 60*1;
 /////////////////////////////////
+player addEventHandler["Respawn",{deleteVehicle (_this select 1);disableUserInput false;life_respawned = true; [] call life_fnc_spawnMenu;}];
+/////////////////////////////////
+
 BDL_dragBodyBleedingOut = {
 	private "_time";
 	_stab_time = 0;
@@ -57,19 +61,11 @@ BDL_dragBodyRevive = {
 	disableUserInput false;
 };
 
-BDL_aSecondOfImmortality = {
-	player allowdamage false;
-	sleep 1;
-	player allowdamage true;
-};
-
-
 BDL_addEventHandlers = {
 	private "_unit";
 	_unit = _this select 0;
 	//BDL_fake_bob addEventHandler ["getOutMan",{[(BDL_fake_bob getVariable "My_real_bob"),"vehicle"]call BDL_dropAction;}];
 };
-
 
 BDL_PlayerEventHandlers = {
 	if ((_this select 0) == "add") then{
@@ -84,7 +80,6 @@ BDL_PlayerEventHandlers = {
 	};
 };
 
-
 BDL_startDrag = {
 	private "_unit";
 	_unit = _this select 0;
@@ -97,9 +92,7 @@ BDL_startDrag = {
 	[_unit,180]remoteExec["setDir"];
 };
 
-
 BDL_stopDrag = {
-	//[]spawn BDL_aSecondOfImmortality;
 	private "_unit";
 	_unit = _this select 0;
 	detach _unit;
@@ -107,7 +100,6 @@ BDL_stopDrag = {
 	BDL_isDRAGGING = false;
 	[player,""]remoteExec["switchMove"];
 };
-
 
 BDL_loadInVehicle = {
 	private ["_unit","_veh","_app","_app1"];
@@ -123,7 +115,6 @@ BDL_loadInVehicle = {
 	BDL_DRAG = -2;
 };
 
-
 BDL_canLoadInThatVehicle = {
 	private ["_bool","_veh"];
 	_bool = false;
@@ -133,7 +124,6 @@ BDL_canLoadInThatVehicle = {
 	}foreach BDL_DROP_LoadOnVehicleType;
 	_bool;//return _bool
 };
-
 
 BDL_dropType = {
 	//lo mettiamo nel veicolo o lo lasciamo a terra?
@@ -169,7 +159,6 @@ BDL_dropType = {
 	{player removeaction _x;} forEach [_action1,_action2];
 };
 
-
 BDL_dropAction = {
 	private ["_unit","_app"];
 	_unit = _this select 0;//il nuovo bob che è in attesa
@@ -182,7 +171,6 @@ BDL_dropAction = {
 	[_unit,"AinjPpneMstpSnonWrflDb_release"] remoteExec ["switchMove"];
 	BDL_DRAG = -2;
 };
-
 
 BDL_nearHospital = {
 	//controlla se l'unità passata come parametro, è vicina ad un marker dell'ospedale
@@ -198,7 +186,6 @@ BDL_nearHospital = {
 	}foreach BDL_HospitalMarkers;
 	_bool;
 };
-
 
 BDL_dragAddaction = {
 	private ["_unit","_app"];
@@ -250,7 +237,6 @@ BDL_dragAddaction = {
 	};
 };
 
-
 BDL_delAddactionOnDistance = {
 	//_this select 0 = _unit a cui è legata l'addaction
 	if(((((player distance (_this select 0)) > 3) || (cursorObject != (_this select 0))) && (!BDL_isDRAGGING)) || (lifeState player == "INCAPACITATED")) then {
@@ -278,7 +264,6 @@ BDL_delAddactionOnDistance = {
 	};
 };
 
-
 BDL_cercaCorpiNelVeicolo = {
 	private ["_veh","_ret"];
 	_veh = _this select 0;
@@ -292,7 +277,6 @@ BDL_cercaCorpiNelVeicolo = {
 	_ret;
 };
 
-
 BDL_ALLOUT = {
 	private "_veh";
 	_veh = _this select 0;
@@ -302,7 +286,6 @@ BDL_ALLOUT = {
 		};
 	} forEach crew _veh;
 };
-
 
 BDL_ACTIONDRAGFORVEHICLES = {
 	private "_unit";

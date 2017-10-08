@@ -10,6 +10,8 @@
     []spawn BDL_busSystem;
 */
 
+player addEventHandler["GetInMan",{[]spawn BDL_busSystem}];
+
 BDL_busSystem = {
   _veh = "agora_ratp";//bus cfg name
   _bus_stop_count = 0;
