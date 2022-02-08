@@ -1,6 +1,6 @@
 # Welcome!
 ### Here you can find my free Arma 3 functions!
-## Probably not working and outdated, but remind me of the good old days.
+##### Probably not working and outdated, but remind me of the good old days.
 
 
 # How to import my functions?
